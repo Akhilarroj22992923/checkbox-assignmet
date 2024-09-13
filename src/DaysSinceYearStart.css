@@ -1,0 +1,24 @@
+/* Basic styling for the DaysSinceYearStart component */
+.days-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .days-container h3 {
+    font-size: 1.25rem;
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+  
+  .days-container p {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  

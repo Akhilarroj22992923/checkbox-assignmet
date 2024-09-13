@@ -1,29 +1,29 @@
-// src/App.js
-
 import React, { useState } from 'react';
 import './App.css';
 import CheckboxComponent from './CheckboxComponent';
-import MessageComponent from './MessageComponent'; // Import the new component
+import MessageComponent from './MessageComponent';
+import DaysSinceYearStart from './DaysSinceYearStart'; // Import the new component
 
 function App() {
-  const [isSuccess, setIsSuccess] = useState(true); // State to toggle success or error messages
+  const [isSuccess, setIsSuccess] = useState(true);
 
   const options = ['Option1', 'Option2', 'Option3', 'Option4', 'Option5'];
+  
+  // Get today's date in YYYY-MM-DD format
+  const today = new Date();
+  const exampleDate = today.toISOString().split('T')[0]; // Format the date as 'YYYY-MM-DD'
 
   return (
     <div className="app-container">
       <center>
         <h1>Checkbox Assignment</h1>
         <button onClick={() => setIsSuccess(!isSuccess)}>
-        Toggle Success/Error Message
-      </button>
-      <MessageComponent isSuccess={isSuccess} />
+          Toggle Success/Error Message
+        </button>
+        <MessageComponent isSuccess={isSuccess} />
+        <DaysSinceYearStart date={exampleDate} /> {/* Use the new component with today's date */}
       </center>
       <CheckboxComponent options={options} />
-      {/* <MessageComponent isSuccess={isSuccess} /> */}
-      {/* <button onClick={() => setIsSuccess(!isSuccess)}>
-        Toggle Success/Error Message
-      </button> */}
     </div>
   );
 }
