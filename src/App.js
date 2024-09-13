@@ -3,6 +3,7 @@ import './App.css';
 import CheckboxComponent from './CheckboxComponent';
 import MessageComponent from './MessageComponent';
 import DaysSinceYearStart from './DaysSinceYearStart'; // Import the new component
+import SpaceCounter from './SpaceCounter'; // Import SpaceCounter component
 
 function App() {
   const [isSuccess, setIsSuccess] = useState(true);
@@ -16,12 +17,13 @@ function App() {
   return (
     <div className="app-container">
       <center>
-        <h1>Checkbox Assignment</h1>
+        <h1>Application</h1>
         <button onClick={() => setIsSuccess(!isSuccess)}>
           Toggle Success/Error Message
         </button>
         <MessageComponent isSuccess={isSuccess} />
-        <DaysSinceYearStart date={exampleDate} /> {/* Use the new component with today's date */}
+        <DaysSinceYearStart date={exampleDate} /> {/* Use the component with today's date */}
+        <SpaceCounter /> {/* Include the SpaceCounter component */}
       </center>
       <CheckboxComponent options={options} />
     </div>

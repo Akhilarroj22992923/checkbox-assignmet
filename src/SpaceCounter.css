@@ -1,0 +1,45 @@
+/* Optional styling for SpaceCounter component */
+.space-counter-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .scrollable-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: auto; /* Allow textarea to expand as needed */
+    max-height: 120px; /* Limit the maximum height */
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  .space-count {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .space-count p {
+    font-size: 1.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .space-count strong {
+    font-size: 1.25rem;
+    color: #343a40;
+  }
+  
