@@ -3,7 +3,7 @@ import './App.css';
 import CheckboxComponent from './CheckboxComponent';
 
 function App() {
-  const options = ['Option1', 'Option1', 'Option2', 'Option3', 'Option4'];
+  const options = ['Option1', 'Option2', 'Option3', 'Option4', 'Option5'];
 
   return (
     <div className="app-container">.

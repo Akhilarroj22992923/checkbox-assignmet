@@ -12,6 +12,13 @@ const CheckboxComponent = ({ options }) => {
     );
   };
 
+  // Function to handle deselection when "X" is clicked
+  const handleDeselect = (option) => {
+    setSelectedOptions((prevSelected) =>
+      prevSelected.filter((item) => item !== option)
+    );
+  };
+
   return (
     <div className="checkbox-container">
       <h3 className="title">Select Options:</h3>
@@ -33,7 +40,15 @@ const CheckboxComponent = ({ options }) => {
         {selectedOptions.length > 0 ? (
           <ul className="options-list">
             {selectedOptions.map((option, index) => (
-              <li key={index} className="option-item">{option}</li>
+              <li key={index} className="option-item">
+                {option}
+                <button
+                  className="deselect-button"
+                  onClick={() => handleDeselect(option)}
+                >
+                  &times; {/* Unicode character for "X" */}
+                </button>
+              </li>
             ))}
           </ul>
         ) : (
